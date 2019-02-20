@@ -1,0 +1,24 @@
+{
+  'name' 'MQTTTOPIC'
+  'desc' 
+  <'
+Extracts the topic from the MQTT message instance on top of the stack.
+  '>
+  'sig' [ [ [ 'msg:org.fusesource.mqtt.client.Message' ] [ 'topic:STRING' ] ] ]
+  'params' {
+    'msg' 'MQTT message instance.'
+    'topic' 'Topic of the MQTT message instance of null if `msg` is null.'
+  }
+  'examples' [
+  ]
+} 'info' STORE
+
+<%
+  !$info INFO
+  SAVE 'context' STORE
+    MQTTTOPIC
+  $context RESTORE
+%>
+'macro' STORE
+
+$macro

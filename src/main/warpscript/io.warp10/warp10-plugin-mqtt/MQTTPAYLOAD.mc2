@@ -1,0 +1,24 @@
+{
+  'name' 'MQTTPAYLOAD'
+  'desc' 
+  <'
+Extracts the payload from the MQTT message instance on top of the stack.
+  '>
+  'sig' [ [ [ 'msg:org.fusesource.mqtt.client.Message' ] [ 'payload:BYTES' ] ] ]
+  'params' {
+    'msg' 'MQTT message instance.'
+    'payload' 'Byte array containing the MQTT message payload or null if `msg` is null.'
+  }
+  'examples' [
+  ]
+} 'info' STORE
+
+<%
+  !$info INFO
+  SAVE 'context' STORE
+    MQTTPAYLOAD
+  $context RESTORE
+%>
+'macro' STORE
+
+$macro
