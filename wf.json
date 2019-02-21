@@ -1,0 +1,17 @@
+{
+  "type": "plugin",
+  "group": "io.warp10",
+  "artifact": "warp10-plugin-mqtt",
+  "version": "0.1.0",
+  "description": "Warp 10™ MQTT Plugin",
+  "author": "SenX",
+  "email": "contact@senx.io",
+  "license": "Apache 2.0",
+  "git": "https://github.com/senx/warp10-plugin-mqtt",
+  "repoUrl": "https://dl.bintray.com/senx/maven/",
+  "tags": [
+    "WarpScript",
+    "MQTT",
+    "IoT"
+  ]
+}
