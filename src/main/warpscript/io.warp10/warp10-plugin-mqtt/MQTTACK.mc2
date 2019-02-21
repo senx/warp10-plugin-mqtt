@@ -15,7 +15,7 @@ Acknowledges the MQTT message instance on top of the stack.
 <%
   !$info INFO
   SAVE 'context' STORE
-    MQTTACK
+    <% 'MQTTACK' EVAL %> <% %> <% %> TRY
   $context RESTORE
 %>
 'macro' STORE

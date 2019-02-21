@@ -16,7 +16,7 @@ Extracts the topic from the MQTT message instance on top of the stack.
 <%
   !$info INFO
   SAVE 'context' STORE
-    MQTTTOPIC
+    <% 'MQTTTOPIC' EVAL %> <% %> <% %> TRY
   $context RESTORE
 %>
 'macro' STORE
