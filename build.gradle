@@ -155,6 +155,9 @@ shadowJar {
    include 'io.warp10/warp10-plugin-mqtt/*.mc2'
    include 'io.warp10/warp10-plugin-mqtt/**/*.mc2'
   }
+  from('.') {
+    include 'README.md'
+  }
 }
 
 shadowJar.dependsOn(test)
