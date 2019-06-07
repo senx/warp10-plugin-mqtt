@@ -220,7 +220,7 @@ public class MQTTConsumer extends Thread {
     
     for (int i = 0; i < this.parallelism; i++) {
       
-      final MemoryWarpScriptStack stack = new MemoryWarpScriptStack(null, null, new Properties());
+      final MemoryWarpScriptStack stack = new MemoryWarpScriptStack(MQTTWarp10Plugin.getExposedStoreClient(), MQTTWarp10Plugin.getExposedDirectoryClient(), new Properties());
       stack.maxLimits();
       
       final LinkedBlockingQueue<Message> queue = null == this.partitioner ? this.queue : this.queues[i];
@@ -265,6 +265,7 @@ public class MQTTConsumer extends Thread {
         }
       };
       
+      executors[i].setContextClassLoader(this.getContextClassLoader());
       executors[i].setName("[MQTT Executor #" + i + "]");
       executors[i].setDaemon(true);
       executors[i].start();
